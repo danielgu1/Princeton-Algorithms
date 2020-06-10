@@ -57,10 +57,7 @@ public class Percolation {
     			openSites++;
     			//obtains index of site that was opened
     			int siteIndex = getIndexByRowAndColumn(i,j);
-    			
-    			
-    			
-    			
+	
     			//connect with left neighbor
     		
     			if(j>1 && this.isOpen(i, j-1)){
@@ -108,7 +105,6 @@ public class Percolation {
 
     // is the site (row, col) full?
     public boolean isFull(int row, int col) {
-    	
     	int siteIndex = getIndexByRowAndColumn(row, col);
     	
     	return (isOpen(row, col) && ufForFullness.connected(top, siteIndex));
@@ -133,37 +129,6 @@ public class Percolation {
 
     // test client (optional)
     public static void main(String[] args) {
-    	Percolation percolation = new Percolation(2);
-
-        StdOut.println("percolates = " + percolation.percolates());
-
-        StdOut.println("isOpen(1, 2) = " + percolation.isOpen(1, 2));
-        StdOut.println("isFull(1, 2) = " + percolation.isFull(1, 2));
-        StdOut.println("open(1, 2)");
-        percolation.open(1, 2);
-        
-        StdOut.println("isOpen(1, 2) = " + percolation.isOpen(1, 2));
-        StdOut.println("isFull(1, 2) = " + percolation.isFull(1, 2));
-        StdOut.println("numberOfOpenSites() = " + percolation.numberOfOpenSites());
-        StdOut.println("percolates() = " + percolation.percolates());
-
-        StdOut.println("isOpen(2, 1) = " + percolation.isOpen(2, 1));
-        StdOut.println("isFull(2, 1) = " + percolation.isFull(2, 1));
-        StdOut.println("open(2, 1)");
-        percolation.open(2, 1);
-        StdOut.println("isOpen(2, 1) = " + percolation.isOpen(2, 1));
-        StdOut.println("isFull(2, 1) = " + percolation.isFull(2, 1));
-        StdOut.println("numberOfOpenSites() = " + percolation.numberOfOpenSites());
-        StdOut.println("percolates() = " + percolation.percolates());
-
-        StdOut.println("isOpen(1, 1) = " + percolation.isOpen(1, 1));
-        StdOut.println("isFull(1, 1) = " + percolation.isFull(1, 1));
-        StdOut.println("open(1, 1)");
-        percolation.open(1, 1);
-        StdOut.println("isOpen(1, 1) = " + percolation.isOpen(1, 1));
-        StdOut.println("isFull(1, 1) = " + percolation.isFull(1, 1));
-        StdOut.println("numberOfOpenSites() = " + percolation.numberOfOpenSites());
-        StdOut.println("percolates() = " + percolation.percolates());
-    	
+	    
     }
 }
